@@ -5,10 +5,28 @@ Flask-Cors==3.0.7
 Flask-RESTful==0.3.7
 Flask-SQLAlchemy==2.4.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
-MarkupSafe==1.1.1
-psycopg2-binary==2.8.2
+# I had issues using Jinja2==2.10.1, so I installed Jinja2==3.1.2
+Jinja2==3.0.2
+# I had issues using MarkupSafe-1.1.1, so I installed MarkupSafe-2.1.1
+MarkupSafe==2.1.1
+# I had issues using psycopg2-binary==2.8.2, so I installed psycopg2-binary==2.9.3
+psycopg2-binary==2.9.3
 pytz==2019.1
 six==1.12.0
 SQLAlchemy==1.3.4
 Werkzeug==0.15.5
+
+# aniso8601==6.0.0
+# Click==7.0
+# Flask==1.0.3
+# Flask-Cors==3.0.7
+# Flask-RESTful==0.3.7
+# Flask-SQLAlchemy==2.4.0
+# itsdangerous==1.1.0
+# Jinja2==2.10.1
+# MarkupSafe==1.1.1
+# psycopg2-binary==2.8.2
+# pytz==2019.1
+# six==1.12.0
+# SQLAlchemy==1.3.4
+# Werkzeug==0.15.5
