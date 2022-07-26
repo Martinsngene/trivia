@@ -98,11 +98,15 @@ def create_app(test_config=None):
     @app.route("/questions", methods=["GET"])
     def get_questions():
         try:
+            questions = []
             questions = Question.query.all()
 
             organized_questions = paginate_response(request, questions)
 
             categories = Category.query.all()
+
+            if len(questions) == 0:
+                abort(404)
 
             return jsonify({"questions": organized_questions,
                             "totalQuestions": len(questions),
@@ -300,13 +304,5 @@ def create_app(test_config=None):
             'error': 422,
             'message': "Unprocessable Entity"
         }), 422)
-
-    @app.errorhandler(500)
-    def internal_server_error():
-        return (jsonify({
-            'success': False,
-            'error': 500,
-            'message': "Internal Server Error"
-        }), 500)
 
     return app
